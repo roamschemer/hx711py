@@ -5,7 +5,10 @@ import sys
 
 EMULATE_HX711=False
 
-referenceUnit = 1
+# referenceUnit = 1 にして物を載せ、出力数字/容量の値を指定する。
+# 例: referenceUnit = 1 にして500gのものを乗せた際に10000が出力された場合は、10000/500=4を指定する。
+
+referenceUnit = 374.198 #374.198 を指定すると手持ちの3kg計が使える。
 
 if not EMULATE_HX711:
     import RPi.GPIO as GPIO
